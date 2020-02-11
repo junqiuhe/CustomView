@@ -32,6 +32,13 @@
             android:text="Use Multi-Touch Test"
             android:onClick="useMultiTouchTest"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Use ViewGroup Test"
+            android:onClick="useViewGroupTest"/>
+
     </LinearLayout>
 
 

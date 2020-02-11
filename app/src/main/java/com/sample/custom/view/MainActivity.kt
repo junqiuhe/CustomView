@@ -7,6 +7,7 @@ import android.view.View
 import com.sample.custom.view.ui.CanvasVonvertTouchTestActivity
 import com.sample.custom.view.ui.RegionClickedActivity
 import com.sample.custom.view.ui.multi_touch.MultiTouchTestActivity
+import com.sample.custom.view.ui.viewgroup.MyViewGroupActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,5 +26,9 @@ class MainActivity : AppCompatActivity() {
 
     fun useMultiTouchTest(view: View){
         startActivity(Intent(this, MultiTouchTestActivity::class.java))
+    }
+
+    fun useViewGroupTest(view: View){
+        startActivity(Intent(this, MyViewGroupActivity::class.java))
     }
 }
