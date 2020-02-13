@@ -8,6 +8,7 @@ import com.sample.custom.view.ui.CanvasVonvertTouchTestActivity
 import com.sample.custom.view.ui.RegionClickedActivity
 import com.sample.custom.view.ui.multi_touch.MultiTouchTestActivity
 import com.sample.custom.view.ui.viewgroup.MyViewGroupActivity
+import com.sample.custom.view.ui.viewgroup.WaterFallActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,5 +31,9 @@ class MainActivity : AppCompatActivity() {
 
     fun useViewGroupTest(view: View){
         startActivity(Intent(this, MyViewGroupActivity::class.java))
+    }
+
+    fun useWaterFallTest(view: View){
+        startActivity(Intent(this, WaterFallActivity::class.java))
     }
 }

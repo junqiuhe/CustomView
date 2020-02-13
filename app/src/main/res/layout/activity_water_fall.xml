@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.viewgroup.WaterFallActivity">
+
+    <Button
+        android:id="@+id/add_view_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加图片"/>
+
+    <com.sample.custom.view.widget.viewgroup.WaterFallLayoutV1
+        android:id="@+id/water_fall_layout_v1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.sample.custom.view.widget.viewgroup.WaterFallLayoutV2
+        android:id="@+id/water_fall_layout_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
