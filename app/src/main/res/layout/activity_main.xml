@@ -46,6 +46,13 @@
             android:text="Use WaterFall Test"
             android:onClick="useWaterFallTest"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Use RecyclerView Test"
+            android:onClick="useRvTest"/>
+
     </LinearLayout>
 
 
