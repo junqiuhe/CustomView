@@ -11,11 +11,8 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sample.custom.view.R
-import com.sample.custom.view.ui.rv.itemdecoration.CustomLinearItemDecoration
-import com.sample.custom.view.ui.rv.layoutmanager.CustomLinearManagerV1
-import com.sample.custom.view.ui.rv.layoutmanager.CustomLinearManagerV2
-import com.sample.custom.view.ui.rv.layoutmanager.CustomLinearManagerV3
-import com.sample.custom.view.ui.rv.layoutmanager.CustomLinearManagerV4
+import com.sample.custom.view.widget.rv.itemdecoration.CustomLinearItemDecoration
+import com.sample.custom.view.widget.rv.layoutmanager.CustomLinearManagerV4
 
 class RvActivity : AppCompatActivity() {
 

@@ -1,8 +1,6 @@
-package com.sample.custom.view.ui.rv.layoutmanager
+package com.sample.custom.view.widget.rv.layoutmanager
 
 import android.graphics.Rect
-import android.graphics.RectF
-import android.util.Log
 import android.util.SparseArray
 import android.view.View
 import android.view.ViewGroup

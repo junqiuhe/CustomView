@@ -1,4 +1,4 @@
-package com.sample.custom.view.ui.rv.itemdecoration
+package com.sample.custom.view.widget.rv.itemdecoration
 
 import android.content.Context
 import android.graphics.Canvas

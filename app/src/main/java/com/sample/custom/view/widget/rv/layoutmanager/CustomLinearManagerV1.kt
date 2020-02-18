@@ -1,4 +1,4 @@
-package com.sample.custom.view.ui.rv.layoutmanager
+package com.sample.custom.view.widget.rv.layoutmanager
 
 import android.util.Log
 import android.view.View
