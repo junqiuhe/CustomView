@@ -15,6 +15,7 @@ import com.sample.custom.view.ui.rv.itemdecoration.CustomLinearItemDecoration
 import com.sample.custom.view.ui.rv.layoutmanager.CustomLinearManagerV1
 import com.sample.custom.view.ui.rv.layoutmanager.CustomLinearManagerV2
 import com.sample.custom.view.ui.rv.layoutmanager.CustomLinearManagerV3
+import com.sample.custom.view.ui.rv.layoutmanager.CustomLinearManagerV4
 
 class RvActivity : AppCompatActivity() {
 
@@ -62,7 +63,7 @@ class RvActivity : AppCompatActivity() {
 
         val rv = findViewById<RecyclerView>(R.id.rv)
 //        rv.layoutManager = LinearLayoutManager(this)
-        rv.layoutManager = CustomLinearManagerV3()
+        rv.layoutManager = CustomLinearManagerV4()
         rv.adapter = SimpleRvAdapter(getDataList())
         rv.addItemDecoration(itemDecoration)
     }

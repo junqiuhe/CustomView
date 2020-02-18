@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
  *
  * https://blog.csdn.net/harvic880925/article/details/84866486
  *
+ * 仅通过此种方式改变item，平移的位置，不能改变item的透明度以及旋转度
+ *
  */
 class CustomLinearManagerV2 : RecyclerView.LayoutManager(){
 
