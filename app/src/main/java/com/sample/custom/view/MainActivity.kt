@@ -7,6 +7,7 @@ import android.view.View
 import com.sample.custom.view.ui.CanvasVonvertTouchTestActivity
 import com.sample.custom.view.ui.RegionClickedActivity
 import com.sample.custom.view.ui.multi_touch.MultiTouchTestActivity
+import com.sample.custom.view.ui.rv.GalleryActivity
 import com.sample.custom.view.ui.rv.RvActivity
 import com.sample.custom.view.ui.viewgroup.MyViewGroupActivity
 import com.sample.custom.view.ui.viewgroup.WaterFallActivity
@@ -40,5 +41,9 @@ class MainActivity : AppCompatActivity() {
 
     fun useRvTest(view: View){
         startActivity(Intent(this, RvActivity::class.java))
+    }
+
+    fun useGalleryByRv(view: View){
+        startActivity(Intent(this, GalleryActivity::class.java))
     }
 }
