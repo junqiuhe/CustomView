@@ -16,53 +16,50 @@ import com.sample.custom.view.widget.rv.layoutmanager.CustomLinearManagerV4
 
 class RvActivity : AppCompatActivity() {
 
+    private lateinit var rv: RecyclerView
+
+    private val adapter: SimpleRvAdapter by lazy {
+        SimpleRvAdapter(getDataList())
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rv)
 
-//        simpleRecyclerView()
-//        learnItemDecoration()
-        useCustomLayoutManager()
+        rv = findViewById(R.id.rv)
+        rv.adapter = adapter
+
+        simpleRecyclerView(null)
     }
 
     /**
      * RecyclerView的简单使用
      */
-    private fun simpleRecyclerView(){
-        /**
-         * 系统自定义的ItemDecoration
-         */
-        val itemDecoration = DividerItemDecoration(this, RecyclerView.VERTICAL)
+    fun simpleRecyclerView(view: View?){
+        if(rv.itemDecorationCount > 0){
+            rv.removeItemDecorationAt(0)
+        }
 
-        val rv = findViewById<RecyclerView>(R.id.rv)
         rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = SimpleRvAdapter(getDataList())
-        rv.addItemDecoration(itemDecoration)
+        rv.addItemDecoration(DividerItemDecoration(this, RecyclerView.VERTICAL))
     }
 
-    private fun learnItemDecoration(){
-        /**
-         * 系统自定义的ItemDecoration
-         */
-        val itemDecoration = CustomLinearItemDecoration(this)
+    fun learnItemDecoration(view: View){
+        if(rv.itemDecorationCount > 0){
+            rv.removeItemDecorationAt(0)
+        }
 
-        val rv = findViewById<RecyclerView>(R.id.rv)
         rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = SimpleRvAdapter(getDataList())
-        rv.addItemDecoration(itemDecoration)
+        rv.addItemDecoration(CustomLinearItemDecoration(this))
     }
 
-    private fun useCustomLayoutManager(){
-        /**
-         * 系统自定义的ItemDecoration
-         */
-        val itemDecoration = DividerItemDecoration(this, RecyclerView.VERTICAL)
+    fun useCustomLayoutManager(view: View){
+        if(rv.itemDecorationCount > 0){
+            rv.removeItemDecorationAt(0)
+        }
 
-        val rv = findViewById<RecyclerView>(R.id.rv)
-//        rv.layoutManager = LinearLayoutManager(this)
         rv.layoutManager = CustomLinearManagerV4()
-        rv.adapter = SimpleRvAdapter(getDataList())
-        rv.addItemDecoration(itemDecoration)
+        rv.addItemDecoration(DividerItemDecoration(this, RecyclerView.VERTICAL))
     }
 
     private fun getDataList(): List<String>{

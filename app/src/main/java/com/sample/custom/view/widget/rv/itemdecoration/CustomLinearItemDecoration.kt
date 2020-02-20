@@ -60,8 +60,11 @@ class CustomLinearItemDecoration(
             for(index in 0 until parent.childCount){
                 val childView = parent.getChildAt(index)
 
-                //获取左边的宽度
+                /**
+                 * 获取被 getItemOffsets() 左边撑开的距离.
+                 */
                 val left = it.getLeftDecorationWidth(childView)
+                val decorationBottom = it.getBottomDecorationHeight(childView)
 
                 val cx = left / 2f
                 val cy = childView.top + childView.height / 2f
@@ -69,11 +72,11 @@ class CustomLinearItemDecoration(
                 val itemCount = it.itemCount
                 val itemPosition = parent.getChildAdapterPosition(childView)
                 if(itemPosition == 0){
-                    c.drawLine(cx, cy, cx, cy + childView.height / 2f, mPaint)
+                    c.drawLine(cx, cy, cx, cy + childView.height / 2f + decorationBottom, mPaint)
                 }else if(itemPosition == itemCount - 1){
                     c.drawLine(cx, childView.top.toFloat(), cx, cy, mPaint)
                 }else{
-                    c.drawLine(cx, childView.top.toFloat(), cx, childView.top.toFloat() + childView.height, mPaint)
+                    c.drawLine(cx, childView.top.toFloat(), cx, childView.top.toFloat() + childView.height + decorationBottom, mPaint)
                 }
                 c.drawCircle(cx, cy, 30f, mPaint)
             }
